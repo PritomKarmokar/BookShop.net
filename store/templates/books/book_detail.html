@@ -1,0 +1,33 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}   
+    <div class="row">
+        <h1>{{book.title}}</h1> 
+        
+        <div class="col-lg-4" >
+            <img style="width:50%;margin-top: 0px; border:3px solid black;" src="{{book.imageURL}}">
+        </div>
+
+        <div class="box-element product" id="two">
+            <h5><strong><em>Author Name : </em><a href=""> {{book.author.name}}</a></strong></h5>
+            <h5><strong><em>Price :</em> {{book.price}}  Tk</strong></h5>
+            <br><br>
+            <button data-book={{book.id}} data-action="add" class="btn btn-outline-success add-btn update-cart">Add to Cart</button>
+            <a class="btn btn-outline-success" href="{% url 'store' %}">Back to home</a>
+           
+        </div>
+            <!-- <div class="box-element product">
+                <h6><strong>{{book.title}}</strong></h6>
+                <hr>
+        
+                <button data-book={{book.id}} data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
+                <a class="btn btn-outline-success" href="{% url 'book_detail' book.id%}">View</a>
+                <h4 style="display: inline; float: right"><strong>{{book.price}}</strong> Tk</h4>
+        
+            </div>
+        </div>
+         -->
+    
+
+    </div>
+{% endblock content %}
