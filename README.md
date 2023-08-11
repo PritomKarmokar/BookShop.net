@@ -1,5 +1,5 @@
 # BookShop.net
-* An online bookshop using Django framework
+* An online bookshop using Django, Sqlite3, HTML, Bootstrap
 ## Features
 * Separate dashboard functionalities for Users and Admin
 * Users can order book to purchase
